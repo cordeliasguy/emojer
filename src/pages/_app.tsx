@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { ClerkProvider } from "@clerk/nextjs";
 import { type AppType } from "next/app";
 import { type AppProps } from "next/app";
@@ -18,6 +19,7 @@ const MyApp: AppType = ({ Component, pageProps }: AppProps) => {
       </Head>
       <Toaster position="bottom-center" />
       <Component {...pageProps} />
+      <Analytics />
     </ClerkProvider>
   );
 };
